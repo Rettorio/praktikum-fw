@@ -14,7 +14,7 @@
     <h1>Daftar Pegawai</h1>
     <a href="{{ route('pegawai.create') }}">Tambahkan Pegawai Baru</a>
     @if ($pegawai->count() > 0)
-        <table>
+        <table class="mt-2">
             <thead>
                 <tr>
                     <th>Nama</th>
@@ -46,7 +46,7 @@
     @else
         <p>Data pegawai Kosong.</p>
     @endif
-    <form method="GET" class="mb-2">
+    <form method="GET" class="mt-2">
         <input type="text" placeholder="nama pegawai" name="nama" value="{{ request()->nama ?? '' }}">
         <button type="submit">cari</button>
     </form>
