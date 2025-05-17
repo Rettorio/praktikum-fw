@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PegawaiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,3 +33,7 @@ Route::get('/home', function () {
 Route::get('/tentang', function () {
     return view('tentang');
 });
+
+// Route::resource('pegawai', PegawaiController::class, ['only' => ['create', 'update', 'destroy', 'edit']]);
+// Route::get('/pegawai?nama={nama}', 'PegawaiController@index');
+Route::resource('pegawai', PegawaiController::class);
